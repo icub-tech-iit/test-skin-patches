@@ -4,7 +4,7 @@ Test Skin Patches
 An automated tool to be used during production stage for testing skin patches.
 
 ## Instructions to run the container
-To run the sandbox locally using [Docker](https://www.docker.com), go through the following steps:
+Install [Docker](https://www.docker.com) and go through the following steps:
 1. Pull the docker image:
     ```sh
     $ docker pull ghcr.io/icub-tech-iit/test-skin-patches:latest
