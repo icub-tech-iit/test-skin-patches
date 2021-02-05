@@ -58,7 +58,8 @@ RUN git clone https://github.com/robotology/robotology-superbuild.git --depth 1 
     cmake .. \
           -DCMAKE_BUILD_TYPE=${BUILD_TYPE} \
           -DYCM_EP_INSTALL_DIR=/usr/local \
-          -DROBOTOLOGY_USES_GAZEBO:BOOL=OFF && \
+          -DROBOTOLOGY_USES_GAZEBO:BOOL=OFF \
+          -DROBOTOLOGY_ENABLE_ICUB_HEAD:BOOL=ON && \
     make && \
     cd ../.. && rm -Rf robotology-superbuild
 
