@@ -65,8 +65,8 @@ RUN git clone https://github.com/robotology/robotology-superbuild.git --depth 1 
 
 # Clone config-files branch
 RUN git clone https://github.com/icub-tech-iit/test-skin-patches.git --depth 1 --branch config-files && \
-    cp -rf test-skin-patches/config-files . && \
-    rm -rf test-skin-patches  
+    mv test-skin-patches/config-files . && \
+    rm -Rf test-skin-patches  
 
 # Clean up git configuration
 RUN git config --global --unset-all user.name && \
