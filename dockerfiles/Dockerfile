@@ -14,7 +14,7 @@ RUN apt update
 RUN apt install -y apt-utils software-properties-common apt-transport-https sudo \
     psmisc lsb-release tmux nano wget curl gedit build-essential gdb git gitk \
     cmake cmake-curses-gui libedit-dev libxml2-dev autoconf locales gdebi terminator meld \
-    dos2unix net-utils iproute2
+    dos2unix net-tools iproute2
 
 # Set the locale
 RUN locale-gen en_US.UTF-8
