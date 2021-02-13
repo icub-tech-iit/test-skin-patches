@@ -90,4 +90,4 @@ RUN rm -Rf /var/lib/apt/lists/*
 
 # Launch bash from /workspace
 WORKDIR /workspace
-CMD ["bash"]
+ENTRYPOINT ["start-vnc-session.sh && bash"]
