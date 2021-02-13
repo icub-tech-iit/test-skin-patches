@@ -14,7 +14,7 @@ RUN apt update
 RUN apt install -y apt-utils software-properties-common apt-transport-https sudo \
     psmisc lsb-release tmux nano wget curl gedit build-essential gdb git gitk \
     cmake cmake-curses-gui libedit-dev libxml2-dev autoconf locales gdebi terminator meld \
-    dos2unix
+    dos2unix net-tools iproute2 can-utils
 
 # Set the locale
 RUN locale-gen en_US.UTF-8
@@ -62,6 +62,11 @@ RUN git clone https://github.com/robotology/robotology-superbuild.git --depth 1 
           -DROBOTOLOGY_ENABLE_ICUB_HEAD:BOOL=ON && \
     make && \
     cd ../.. && rm -Rf robotology-superbuild
+
+# Clone config-files branch
+RUN git clone https://github.com/icub-tech-iit/test-skin-patches.git --depth 1 && \
+    mv test-skin-patches/config-files . && \
+    rm -Rf test-skin-patches
 
 # Clean up git configuration
 RUN git config --global --unset-all user.name && \
