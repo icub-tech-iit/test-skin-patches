@@ -64,7 +64,7 @@ RUN git clone https://github.com/robotology/robotology-superbuild.git --depth 1 
     cd ../.. && rm -Rf robotology-superbuild
 
 # Clone config-files branch
-RUN git clone https://github.com/icub-tech-iit/test-skin-patches.git --depth 1 --branch config-files && \
+RUN git clone https://github.com/icub-tech-iit/test-skin-patches.git --depth 1 && \
     mv test-skin-patches/config-files . && \
     rm -Rf test-skin-patches
 
