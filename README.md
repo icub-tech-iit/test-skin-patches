@@ -4,7 +4,9 @@ Test Skin Patches
 An automated tool to be used during production stage for testing skin patches.
 
 ## Instructions to run the container
-Install [Docker](https://www.docker.com) and go through the following steps:
+Install [Docker](https://www.docker.com) and make sure to go through these [post-installation steps](https://docs.docker.com/engine/install/linux-postinstall/) on Linux systems.
+
+Once you have Docker properly installed, follow these instructions:
 1. Pull the docker image:
     ```sh
     $ docker pull ghcr.io/icub-tech-iit/test-skin-patches:latest
