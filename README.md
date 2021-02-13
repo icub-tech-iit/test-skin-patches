@@ -11,14 +11,18 @@ Install [Docker](https://www.docker.com) and go through the following steps:
     ```
 2. Launch the container:
     ```sh
-    $ docker run -it --rm --network host ghcr.io/icub-tech-iit/test-skin-patches:latest
+    $ docker run --name test_skin --rm --network host ghcr.io/icub-tech-iit/test-skin-patches:latest
     ```
-3. From within the container shell, launch the following scripts:
+3. Open up the browser and connect to **`localhost:6080`** to get to the workspace desktop GUI.
+5. Once done, stop the container:
     ```sh
-    $ start-vnc-session.sh
+    $ docker stop test_skin
     ```
-4. Open up the browser and connect to **`localhost:6080`** to get to the workspace desktop GUI.
-5. Once done, from the container shell press **CTRL+D**.
+
+⚠ In case the desktop GUI stops working, you can start it over:
+```sh
+$ docker exec test_skin start-vnc-session.sh
+```
 
 ### 👨🏻‍💻 Maintainers
 This repository is maintained by:
