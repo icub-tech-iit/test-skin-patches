@@ -11,7 +11,7 @@ Install [Docker](https://www.docker.com) and go through the following steps:
     ```
 2. Launch the container:
     ```sh
-    $ docker run -it --rm -p 6080:6080 --device=/dev/ttyUSB0 ghcr.io/icub-tech-iit/test-skin-patches:latest
+    $ docker run -it --rm --network host ghcr.io/icub-tech-iit/test-skin-patches:latest
     ```
 3. From within the container shell, launch the following scripts:
     ```sh
