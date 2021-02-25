@@ -42,7 +42,7 @@ In the yarpmanager GUI :
 
 ![test-skin](./assets/test-skin.png)
 
-Now touch the skin and you'll se the part touched highlighted in the
+Touch the skin and you'll see the corresponding patch highlighting in the GUI.
  
 ### 👨🏻‍💻 Maintainers
 This repository is maintained by:
