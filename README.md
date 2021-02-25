@@ -42,7 +42,7 @@ Once you have Docker properly installed, follow these instructions:
 
 ![test-skin](./assets/test-skin.png)
 
-## Shut down the docker container
+## How to shut down the docker container
 From the container shell, press **CTRL+D**.
  
 ### 👨🏻‍💻 Maintainers
