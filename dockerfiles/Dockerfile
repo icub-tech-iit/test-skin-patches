@@ -88,6 +88,6 @@ EXPOSE 5901 6080 10000/tcp 10000/udp
 # Clean up unnecessary installation products
 RUN rm -Rf /var/lib/apt/lists/*
 
-# Launch bash from /workspace
-WORKDIR /workspace
+# Launch bash from /config-files
+WORKDIR /config-files
 CMD ["bash"]
