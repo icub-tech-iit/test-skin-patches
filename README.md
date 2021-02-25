@@ -31,7 +31,7 @@ Connect the `ESD USB/CAN` interface to the host machine, then :
 Inside the docker run :
 ```sh
     $ yarpserver
-    $ yarp run --server /icubsrv
+    $ yarprun --server /icubsrv
     $ yarprobotinterface --config <skin_part_.xml>
     $ yarpmanager
 ```
