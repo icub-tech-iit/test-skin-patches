@@ -27,7 +27,7 @@ Once you have Docker properly installed, follow these instructions:
     $ sudo ip link set can0 type can bitrate 1000000
     $ sudo ip link set up can0
     ```
-2. From within the docker container's desktop, open up a terminal for each of the following commands to be launched:
+2. From within the container's desktop GUI, open up a terminal console for each of the following commands to be launched:
     ```sh
     $ yarpserver
     $ yarprun --server /icubsrv
