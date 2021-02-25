@@ -34,7 +34,7 @@ Once you have Docker properly installed, follow these instructions:
     $ yarprobotinterface --config <skin_part_.xml>
     $ yarpmanager
     ```
-3. In the yarpmanager GUI:
+3. From within the yarpmanager GUI:
 - Select `Entities` > `Applications` > `SkinGui_All_V2`
 - Run `skinManager`, `skinManagerGui` and `iCubSkinGui` related to the part to be tested (in this example `left_arm`)
 - Connect the port corresponding to the part to be tested (in this example `left_arm`)
