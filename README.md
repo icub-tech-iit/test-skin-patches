@@ -22,7 +22,7 @@ Once you have Docker properly installed, follow these instructions:
 4. Open up the browser and connect to **`localhost:6080`** to get to the workspace desktop GUI.
 
 ## Instructions to test the skin
-1. Connect the `ESD USB/CAN` device to the host machine, then:
+1. Connect the `ESD USB/CAN` device to the host machine, then from a host console do:
     ```sh
     $ sudo ip link set can0 type can bitrate 1000000
     $ sudo ip link set up can0
