@@ -22,6 +22,28 @@ Once you have Docker properly installed, follow these instructions:
 4. Open up the browser and connect to **`localhost:6080`** to get to the workspace desktop GUI.
 5. Once done, from the container shell press **CTRL+D**.
 
+## Instructions to test the skin
+Connect the `ESD USB/CAN` interface to the host machine, then :
+```sh
+    $ sudo ip link set can0 type can bitrate 1000000
+    $ sudo ip link set up can0
+```
+Inside the docker run :
+```sh
+    $ yarpserver
+    $ yarp run --server /icubsrv
+    $ yarprobotinterface --config <skin_part_.xml>
+    $ yarpmanager
+```
+In the yarpmanager GUI :
+- Select `Entities` -> `Applications` -> `SkinGui_All_V2`
+- Run `skinManager` and `skinManagerGui`
+- Connect the port correspondig to the part to be testsed (in thi example `left_arm`)
+
+![test-skin](./assets/test-skin.png)
+
+Now touch the skin and you'll se the part touched highlighted in the
+ 
 ### 👨🏻‍💻 Maintainers
 This repository is maintained by:
 
