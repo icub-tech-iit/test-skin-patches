@@ -36,10 +36,10 @@ Once you have Docker properly installed, follow these instructions:
     ```
     where `skin_part.xml` corresponds to the configuration file of the part under test.
 3. From within the yarpmanager GUI:
-- Select `Entities` > `Applications` > `SkinGui_All_V2`
-- Run `skinManager`, `skinManagerGui` and `iCubSkinGui` related to the part to be tested (in this example `left_arm`)
-- Connect the port corresponding to the part to be tested (in this example `left_arm`)
-- Touch the skin patch and you'll see the corresponding part highlighting in the GUI.
+    - Select `Entities` > `Applications` > `SkinGui_All_V2`
+    - Run `skinManager`, `skinManagerGui` and `iCubSkinGui` related to the part to be tested (in this example `left_arm`)
+    - Connect the port corresponding to the part to be tested (in this example `left_arm`)
+    - Touch the skin patch and you'll see the corresponding part highlighting in the GUI.
 
 ![test-skin](./assets/test-skin.png)
 
