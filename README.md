@@ -21,10 +21,6 @@ Once you have Docker properly installed, follow these instructions:
     ```
 4. Open up the browser and connect to **`localhost:6080`** to get to the workspace desktop GUI.
 
-### 🖥 Tested platforms
-We tested that the docker container run successfully on the following operating systems:
-- Ubuntu 20.04
-
 ## 🖐🏻 Instructions to test the skin
 1. Connect the `ESD USB/CAN` device to the host machine, then from a host console do:
     ```sh
@@ -50,6 +46,10 @@ We tested that the docker container run successfully on the following operating 
 
 ## 🔘 How to shut down the docker container
 From the container shell, press **CTRL+D**.
+
+### 🖥 Tested platforms
+We tested that the docker container run successfully on the following operating systems:
+- Ubuntu 20.04
  
 ### 👨🏻‍💻 Maintainers
 This repository is maintained by:
