@@ -3,7 +3,7 @@ Test Skin Patches
 
 An automated tool to be used during production stage for testing skin patches.
 
-## Instructions to run the docker container
+## 📦 Instructions to run the docker container
 Install [Docker](https://www.docker.com) and make sure to go through these [post-installation steps](https://docs.docker.com/engine/install/linux-postinstall/) on Linux systems.
 
 Once you have Docker properly installed, follow these instructions:
@@ -21,11 +21,11 @@ Once you have Docker properly installed, follow these instructions:
     ```
 4. Open up the browser and connect to **`localhost:6080`** to get to the workspace desktop GUI.
 
-### Tested platforms
+### 🖥 Tested platforms
 We tested that the docker container run successfully on the following operating systems:
 - Ubuntu 20.04
 
-## Instructions to test the skin
+## 🖐🏻 Instructions to test the skin
 1. Connect the `ESD USB/CAN` device to the host machine, then from a host console do:
     ```sh
     $ sudo ip link set can0 type can bitrate 1000000
@@ -48,7 +48,7 @@ We tested that the docker container run successfully on the following operating 
 
 ![test-skin](./assets/test-skin.png)
 
-## How to shut down the docker container
+## 🔘 How to shut down the docker container
 From the container shell, press **CTRL+D**.
  
 ### 👨🏻‍💻 Maintainers
