@@ -48,7 +48,7 @@ Once you have Docker properly installed, follow these instructions:
 From the container shell, press **CTRL+D**.
 
 ### 🖥 Tested platforms
-We tested that the docker container run successfully on the following operating systems:
+We tested that the docker container runs successfully on the following operating systems:
 - Ubuntu 20.04
  
 ### 👨🏻‍💻 Maintainers
