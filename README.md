@@ -34,7 +34,7 @@ Once you have Docker properly installed, follow these instructions:
     $ yarprobotinterface --config <skin_part.xml>
     $ yarpmanager
     ```
-    where `skin_part.xml` corresponds to the configuration file of the part under test.\
+    where `<skin_part.xml>` corresponds to the configuration file of the part under test.\
     To list down the available parts, just do `ls /config-files/*.xml`.
 3. From within the yarpmanager GUI:
     - Select `Entities` > `Applications` > `SkinGui_All_V2`
