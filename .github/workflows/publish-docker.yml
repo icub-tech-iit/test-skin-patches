@@ -24,8 +24,8 @@ jobs:
         BUILD_TYPE:  ${{ github.event.inputs.build_type }}
       with:
         name: icub-tech-iit/test-skin-patches
-        username: pattacini
-        password: ${{ secrets.PUBLISH_DOCKER_IMAGE_TOKEN_PATTACINI }}
+        username: ${{ github.actor }}
+        password: ${{ secrets.GITHUB_TOKEN }}
         workdir: dockerfiles
         buildargs: ROBOTOLOGY_SUPERBUILD_RELEASE, BUILD_TYPE
         registry: ghcr.io
