@@ -8,31 +8,31 @@ Install [Docker](https://www.docker.com) and make sure to go through these [post
 
 Once you have Docker properly installed, follow these instructions:
 1. Pull the docker image:
-    ```sh
-    $ docker pull ghcr.io/icub-tech-iit/test-skin-patches:latest
+    ```console
+    docker pull ghcr.io/icub-tech-iit/test-skin-patches:latest
     ```
 2. Launch the container:
-    ```sh
-    $ docker run -it --rm --network host ghcr.io/icub-tech-iit/test-skin-patches:latest
+    ```console
+    docker run -it --rm --network host ghcr.io/icub-tech-iit/test-skin-patches:latest
     ```
 3. From within the container shell, launch the following scripts:
-    ```sh
-    $ start-vnc-session.sh
+    ```console
+    start-vnc-session.sh
     ```
 4. Open up the browser and connect to **`localhost:6080`** to get to the workspace desktop GUI.
 
 ## 🖐🏻 Instructions to test the skin
 1. Connect the `ESD USB/CAN` device to the host machine, then from a host console do:
-    ```sh
-    $ sudo ip link set can0 type can bitrate 1000000
-    $ sudo ip link set up can0
+    ```console
+    sudo ip link set can0 type can bitrate 1000000
+    sudo ip link set up can0
     ```
 2. From within the container's desktop GUI, open up a terminal console for each of the following commands to be launched:
-    ```sh
-    $ yarpserver
-    $ yarprun --server /icubsrv
-    $ yarprobotinterface --config <skin_part.xml>
-    $ yarpmanager
+    ```console
+    yarpserver
+    yarprun --server /icubsrv
+    yarprobotinterface --config <skin_part.xml>
+    yarpmanager
     ```
     where `<skin_part.xml>` corresponds to the configuration file of the part under test.\
     To list down the available parts, just do `ls /config-files/*.xml`.
