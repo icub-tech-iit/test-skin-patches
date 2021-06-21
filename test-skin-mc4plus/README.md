@@ -13,7 +13,7 @@ Requirements
 The `mc4plus` must have the IP addrress set to `10.0.1.1`
 
 
-## Change mtb4`s ID
+## Change mtb4 ID
 Change the ID of the `mtb4` accordingly the skin patch is going to be tested
 To do that in a terminal run :
 
