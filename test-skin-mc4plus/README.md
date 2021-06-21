@@ -17,7 +17,7 @@ The `mc4plus` must have the IP addrress set to `10.0.1.1`
 Change the ID of the `mtb4` accordingly the skin patch is going to be tested
 To do that in a terminal run :
 
-```
+```console
 cd <test-skin-patches-repo-path>/test-skin-mc4plus
 FirmwareUpdater -a
 ```
@@ -37,7 +37,7 @@ Them in the GUI:
 ## Test the skin patch
 In a terminal run :
 
-```
+```console
 cd <test-skin-patches-repo-path>/test-skin-mc4plus
 yarpserver
 yarp run --server /icubsrv
