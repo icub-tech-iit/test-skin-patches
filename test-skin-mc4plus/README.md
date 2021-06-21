@@ -18,7 +18,7 @@ Change the ID of the `mtb4` accordingly the skin patch is going to be tested
 To do that in a terminal run :
 
 ```console
-cd <test-skin-patches-repo-path>/test-skin-mc4plus
+cd <test-skin-patches-repo-path>/test-skin-mc4plus/config-files
 FirmwareUpdater -a
 ```
 
@@ -38,7 +38,7 @@ Them in the GUI:
 In a terminal run :
 
 ```console
-cd <test-skin-patches-repo-path>/test-skin-mc4plus
+cd <test-skin-patches-repo-path>/test-skin-mc4plus/config-files
 yarpserver
 yarp run --server /icubsrv
 yarprobotinterface --config skin-<aprt-to-be-tested>.xml
