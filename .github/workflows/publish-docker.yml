@@ -8,11 +8,16 @@ on:
         required: true
         default: 'v0000.00'
       add_tag_latest:
+        type: boolean
         description: 'Add tag latest to the docker image'
         required: true
-        default: 'yes'
+        default: 'true'
       build_type:
+        type: choice
         description: 'Build Type'
+        options:
+        - 'Release'
+        - 'Debug'
         required: true
         default: 'Release'
 
