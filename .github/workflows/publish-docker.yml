@@ -28,14 +28,14 @@ jobs:
     - uses: actions/checkout@main
     - name: Require tag latest
       id: add_tag_latest
-      if: ${{ github.event.inputs.add_tag_latest == 'yes' }}
+      if: ${{ github.inputs.add_tag_latest == 'yes' }}
       run: |
         echo "::set-output name=tag::, latest"
     - name: Publish to Registry
       uses: elgohr/Publish-Docker-Github-Action@main
       env:
-        ROBOTOLOGY_SUPERBUILD_RELEASE: ${{ github.event.inputs.superbuild_release }}
-        BUILD_TYPE:  ${{ github.event.inputs.build_type }}
+        ROBOTOLOGY_SUPERBUILD_RELEASE: ${{ github.inputs.superbuild_release }}
+        BUILD_TYPE:  ${{ github.inputs.build_type }}
       with:
         name: icub-tech-iit/test-skin-patches
         username: ${{ github.actor }}
@@ -43,4 +43,4 @@ jobs:
         workdir: dockerfiles
         buildargs: ROBOTOLOGY_SUPERBUILD_RELEASE, BUILD_TYPE
         registry: ghcr.io
-        tags: "${{ github.event.inputs.superbuild_release }}${{ steps.add_tag_latest.outputs.tag }}"
+        tags: "${{ github.inputs.superbuild_release }}${{ steps.add_tag_latest.outputs.tag }}"
