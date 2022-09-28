@@ -76,8 +76,11 @@ RUN git config --global --unset-all user.name && \
 
 # Set environmental variables
 ENV DISPLAY=:1
-ENV YARP_DATA_DIRS=/usr/local/share/yarp:/usr/local/share/iCub
-ENV LD_LIBRARY_PATH=/usr/local/lib:/usr/local/lib/yarp
+ENV YARP_COLORED_OUTPUT=1
+
+# Set up .bashrc
+RUN echo "source /usr/local/share/robotology-superbuild/setup.sh" >> ~/.bashrc && \
+    echo "LD_LIBRARY_PATH=/usr/local/lib:\${LD_LIBRARY_PATH}" >>  ~/.bashrc
 
 # Set up script to launch graphics and vnc
 COPY start-vnc-session.sh /usr/bin/start-vnc-session.sh
