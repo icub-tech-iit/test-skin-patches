@@ -6,8 +6,8 @@ This configuration files will be used to test the skin patched using a `mc4plus`
 Requirements
 
 - Power supply (12Vdc @1A)
-- `mc4plus/mtb4/patches connector` setup
-- Linux system with `robotology-superbuild` installed
+- `mc4plus/mtb4/patches connector` setup (see picture above)
+- Linux system with `robotology-superbuild` installed (https://github.com/robotology/robotology-superbuild)
 - This repo cloned (https://github.com/icub-tech-iit/test-skin-patches.git)
 
 
