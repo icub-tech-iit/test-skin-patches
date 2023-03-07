@@ -6,11 +6,13 @@ This configuration files will be used to test the skin patched using a `mc4plus`
 Requirements
 
 - Power supply (12Vdc @1A)
-- `mc4plus/mtb4/patches connector` setup 
+- `mc4plus/mtb4/patches connector` setup
+- Linux system with `robotology-superbuild` installed
+- This repo cloned (https://github.com/icub-tech-iit/test-skin-patches.git)
 
 
-!!!note
-The `mc4plus` must have the IP addrress set to `10.0.1.1`
+> **Note**
+> The `mc4plus` must have the IP addrress set to `10.0.1.1`
 
 
 ## Change mtb4 ID
@@ -41,7 +43,7 @@ In a terminal run :
 cd test-skin-patches/test-skin-mc4plus/config-files
 yarpserver
 yarp run --server /icubsrv
-yarprobotinterface --config skin-<aprt-to-be-tested>.xml
+yarprobotinterface --config <skin-part-to-be-tested.xml> (i.e. yarprobotinterface --config skin-right-arm.xml)
 yarpmanager
 ```
 
