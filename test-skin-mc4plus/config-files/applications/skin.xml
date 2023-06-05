@@ -38,6 +38,13 @@
   <module>
     <name>iCubSkinGui</name>
     <!-- Remember to use the proper configuration files (i.e. "_V2.ini" for V2 robots) -->
+    <parameters>--from left_hand_V2_2.ini --useCalibration --xpos 320 --ypos 0 --width 300 --height 300</parameters>
+    <node>icubsrv</node>
+    <tag>skinGuiLH2</tag>
+  </module>
+  <module>
+    <name>iCubSkinGui</name>
+    <!-- Remember to use the proper configuration files (i.e. "_V2.ini" for V2 robots) -->
     <parameters>--from right_arm_V2.ini --useCalibration --xpos 640 --ypos 350 --width 300 --height 300</parameters>
     <node>icubsrv</node>
     <tag>skinGuiRA</tag>
@@ -55,6 +62,13 @@
     <parameters>--from right_hand_V2.ini --useCalibration --xpos 960 --ypos 0 --width 300 --height 300</parameters>
     <node>icubsrv</node>
     <tag>skinGuiRH</tag>
+  </module>
+  <module>
+    <name>iCubSkinGui</name>
+    <!-- Remember to use the proper configuration files (i.e. "_V2.ini" for V2 robots) -->
+    <parameters>--from right_hand_V2_2.ini --useCalibration --xpos 960 --ypos 0 --width 300 --height 300</parameters>
+    <node>icubsrv</node>
+    <tag>skinGuiRH2</tag>
   </module>
   <module>
     <name>iCubSkinGui</name>
