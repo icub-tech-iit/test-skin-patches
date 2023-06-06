@@ -1,0 +1,65 @@
+<application>
+  <name>Skin fingertip Gui</name>
+  <module>
+    <name>skinManager</name>
+    <parameters>--from skinManAllPlusLegs.ini --context skinGui</parameters>
+    <node>icubsrv</node>
+    <tag>skinMan</tag>
+  </module>
+  <module>
+    <name>skinManagerGui</name>
+    <parameters>--from skinManGui.ini --context skinGui --xpos 1020 --ypos 350</parameters>
+    <node>icubsrv</node>
+    <tag>skinManGui</tag>
+  </module>
+
+  
+  <module>
+    <name>iCubSkinGui</name>
+    <!-- Remember to use the proper configuration files (i.e. "_V2_2.ini" for mk1.1 fingertips) -->
+    <parameters>--from left_hand_V2_2.ini  --xpos 320 --ypos 0 --width 600 --height 600</parameters>
+    <node>icubsrv</node>
+    <tag>skinGuiLH</tag>
+  </module>
+  <module>
+    <name>iCubSkinGui</name>
+    <!-- Remember to use the proper configuration files (i.e. "_V2.ini" for V2 robots) -->
+    <parameters>--from right_hand_V2_2.ini --xpos 960 --ypos 0 --width 600 --height 600</parameters>
+    <node>icubsrv</node>
+    <tag>skinGuiRH</tag>
+  </module>
+  
+  
+  <connection>
+    <from>/skinManager/skin_events:o</from>
+    <to>/wholeBodyDynamics/skin_contacts:i</to>
+    <protocol>udp</protocol>
+  </connection>
+  <connection>
+    <from>/skinManagerGui/rpc:o</from>
+    <to>/skinManager/rpc</to>
+    <protocol>tcp</protocol>
+  </connection>
+  <connection>
+    <from>/skinManager/monitor:o</from>
+    <to>/skinManagerGui/monitor:i</to>
+    <protocol>udp</protocol>
+  </connection>
+  <connection>
+    <from>/skinManager/info:o</from>
+    <to>/skinManagerGui/info:i</to>
+    <protocol>tcp</protocol>
+  </connection>
+  
+  <connection>
+    <from>/icub/skin/left_hand</from>
+    <to>/skinGui/left_hand:i</to>
+    <protocol>udp</protocol>
+  </connection>
+  <connection>
+    <from>/icub/skin/right_hand</from>
+    <to>/skinGui/right_hand:i</to>
+    <protocol>udp</protocol>
+  </connection>
+
+</application>
