@@ -56,5 +56,4 @@ This repository is maintained by:
 
 | | |
 |:---:|:---:|
-| [<img src="https://github.com/davidetome.png" width="40">](https://github.com/davidetome) | [@davidetome](https://github.com/davidetome) |
 | [<img src="https://github.com/pattacini.png" width="40">](https://github.com/pattacini) | [@pattacini](https://github.com/pattacini) |
