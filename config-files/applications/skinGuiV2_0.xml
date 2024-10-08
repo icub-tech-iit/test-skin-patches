@@ -56,6 +56,12 @@
     <node>icubsrv</node>
     <tag>skinGuiRH</tag>
   </module>
+    <name>iCubSkinGui</name>
+    <!-- Remember to use the proper configuration files (i.e. "_V2.ini" for V2 robots) -->
+    <parameters>---from allfingertips.ini --xpos 960 --ypos 0 --width 600 --height 600</parameters>
+    <node>icubsrv</node>
+    <tag>skinGuiFT2Test</tag>
+  </module>
   <module>
     <name>iCubSkinGui</name>
     <!-- Remember to use the proper configuration files (i.e. "_V2.ini" for V2 robots) -->
@@ -85,7 +91,11 @@
     <to>/skinManagerGui/info:i</to>
     <protocol>tcp</protocol>
   </connection>
-  
+    <connection>
+    <from>/testSkin/skin/fingertip</from>
+    <to>/skinGui/fingertips:i</to>
+    <protocol>udp</protocol>
+  </connection>
   <connection>
     <from>/icub/skin/left_hand_comp</from>
     <to>/skinGui/left_hand:i</to>

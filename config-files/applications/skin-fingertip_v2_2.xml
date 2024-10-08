@@ -11,6 +11,12 @@
     <parameters>--from skinManGui.ini --context skinGui --xpos 1020 --ypos 350</parameters>
     <node>icubsrv</node>
     <tag>skinManGui</tag>
+  </module>
+  <module>
+    <name>yarprobotinterface</name>
+    <parameters>--config skin-fingertips.xml</parameters>
+    <node>icubsrv</node>
+    <tag>yarprobotinterface</tag>
   </module-->
 
   <module>
