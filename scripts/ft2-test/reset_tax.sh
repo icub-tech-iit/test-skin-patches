@@ -2,7 +2,7 @@
 
 ################################################################################
 #                                                                              #
-# Copyright (C) 2020 Fondazione Istitito Italiano di Tecnologia (IIT)          #
+# Copyright (C) 2024 Fondazione Istitito Italiano di Tecnologia (IIT)          #
 # All Rights Reserved.                                                         #
 #                                                                              #
 ################################################################################
