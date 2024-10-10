@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE robot PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
+
+<robot name="testSkin" portprefix="testSkin" xmlns:xi="http://www.w3.org/2001/XInclude" build="1">
+    
+  <devices>
+    <!-- SKIN -->
+    <xi:include href="wrappers/skin/fingertip_wrapper.xml" />
+    <xi:include href="hardware/skin/fingertip.xml" />
+  </devices>
+    
+</robot> 

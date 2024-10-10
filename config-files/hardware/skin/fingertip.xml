@@ -1,0 +1,13 @@
+    <device xmlns:xi="http://www.w3.org/2001/XInclude" name="fingertip" type="canBusSkin">
+        <xi:include href="../../general.xml" />
+ 
+
+         <params xmlns:xi="http://www.w3.org/2001/XInclude" robot="testSkin" build="1">
+        <param name="canDeviceNum"> 0         </param>
+        <param name="skinCanIds">   10  </param>
+        <param name="period"> 10              </param>
+        <param name="canbusDevice"> socketcan   </param>
+      </params>
+
+        <xi:include href="./fingertip-skinSpec.xml" />
+    </device>
