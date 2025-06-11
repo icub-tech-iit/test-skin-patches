@@ -44,11 +44,6 @@ RUN git clone https://github.com/novnc/noVNC.git /opt/novnc && \
     git clone https://github.com/novnc/websockify /opt/novnc/utils/websockify && \
     echo "<html><head><meta http-equiv=\"Refresh\" content=\"0; url=vnc.html?autoconnect=true&reconnect=true&reconnect_delay=1000&resize=scale&quality=9\"></head></html>" > /opt/novnc/index.html
 
-# Install icub-common
-RUN sh -c 'echo "deb http://www.icub.org/ubuntu `lsb_release -cs` contrib/science" > /etc/apt/sources.list.d/icub.list' && \
-    apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 57A5ACB6110576A6 && \
-    apt update && \
-    apt install -y icub-common
     
 # Select options
 ARG ROBOTOLOGY_SUPERBUILD_RELEASE
@@ -58,9 +53,11 @@ ARG BUILD_TYPE
 RUN git config --global user.name "GitHub Actions" && \
     git config --global user.email "actions@github.com"
 
-# Build robotology-superbuild
+# Build robotology-superbuild and # install apt dependencies
 RUN git clone https://github.com/robotology/robotology-superbuild.git --depth 1 --branch ${ROBOTOLOGY_SUPERBUILD_RELEASE} && \
-    cd robotology-superbuild && \
+    ./robotology-superbuild/scripts/install_apt_dependencies.sh
+
+RUN cd robotology-superbuild && \
     mkdir build && cd build && \
     cmake .. \
           -DCMAKE_BUILD_TYPE=${BUILD_TYPE} \
