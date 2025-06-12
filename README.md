@@ -13,7 +13,7 @@ Once you have Docker properly installed, follow these instructions:
     ```
 2. Launch the container:
     ```console
-    docker run -it --rm --network host ghcr.io/icub-tech-iit/test-skin-patches:latest
+    docker run -it --rm --privileged --network host ghcr.io/icub-tech-iit/test-skin-patches:latest
     ```
 3. From within the container shell, launch the following scripts:
     ```console
@@ -27,6 +27,9 @@ Once you have Docker properly installed, follow these instructions:
     sudo ip link set can0 type can bitrate 1000000
     sudo ip link set up can0
     ```
+> [!note]
+> The previous instructions have to be done every time you disconnect/connect the esd-can
+
 2. From within the container's desktop GUI, open up a terminal console for each of the following commands to be launched:
     ```console
     yarpserver
