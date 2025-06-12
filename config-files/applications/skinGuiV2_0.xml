@@ -56,6 +56,7 @@
     <node>icubsrv</node>
     <tag>skinGuiRH</tag>
   </module>
+  <module>
     <name>iCubSkinGui</name>
     <!-- Remember to use the proper configuration files (i.e. "_V2.ini" for V2 robots) -->
     <parameters>---from allfingertips.ini --xpos 960 --ypos 0 --width 600 --height 600</parameters>
